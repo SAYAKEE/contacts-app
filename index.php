@@ -14,7 +14,7 @@
         <button class="btn btn-info w-100"><a href="add.php">+ ADD NEW CONTACT</a></button>
     </header>
     <main class="container text-center">
-        <table class="table">
+        <table class="table table-striped table-border border-3 table-hover">
             <thead>
                 <th>Name</th>
                 <th>Phone  Number</th>
@@ -56,5 +56,9 @@
             </tbody>
         </table>
     </main>
+    <hr>
+    <footer class="container text-center">
+        2023 Rights &checkmark; bla la laala Blala blaa la laa
+    </footer>
 </body>
 </html>
