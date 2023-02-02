@@ -11,7 +11,6 @@
     <header class="text-center container">
         <h1>CONTACTS</h1>
         <hr>
-        <!-- <button class="btn btn-info w-100"><a href="add.php">+ ADD NEW CONTACT</a></button> -->
     </header>
     <main class="container">
         <h4>Create New Contact</h4>

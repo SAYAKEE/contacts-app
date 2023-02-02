@@ -1,3 +1,15 @@
+<?php
+
+include("mySQL.php");
+
+$db = connect();
+
+$statement = $db->query("SELECT * FROM people");
+
+$contacts = $statement->fetchAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +23,7 @@
     <header class="text-center container">
         <h1>CONTACTS</h1>
         <hr>
-        <button class="btn btn-info w-100"><a href="add.php">+ ADD NEW CONTACT</a></button>
+        
     </header>
     <main class="container text-center">
         <table class="table table-striped table-border border-3 table-hover">
@@ -21,40 +33,19 @@
                 <th>Actions</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>KO ARR LUU</td>
-                    <td>+349569238</td>
-                    <td>
-                        <a href="edit">Edit</a>
-                        <a href="delete">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>KO ARR LUU</td>
-                    <td>+349569238</td>
-                    <td>
-                        <a href="edit">Edit</a>
-                        <a href="delete">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>KO ARR LUU</td>
-                    <td>+349569238</td>
-                    <td>
-                        <a href="edit">Edit</a>
-                        <a href="delete">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>KO ARR LUU</td>
-                    <td>+349569238</td>
-                    <td>
-                        <a href="edit">Edit</a>
-                        <a href="delete">Delete</a>
-                    </td>
-                </tr>
+                <?php foreach($contacts as $contact) : ?>
+                    <tr>
+                        <td><?= $contact->name ?></td>
+                        <td><?= $contact->phone ?></td>
+                        <td>
+                            <a href="edit.php">Edit</a>
+                            <a href="delete.php">Delete</a>
+                        </td>
+                    </tr>
+                <?php endforeach ?>
             </tbody>
         </table>
+        <button class="btn btn-secondary bg-light w-100"><a href="add.php">+ ADD NEW CONTACT</a></button>
     </main>
     <hr>
     <footer class="container text-center">
