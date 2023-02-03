@@ -36,6 +36,7 @@ $contact = $statement->fetch();
         <h4 class="text-center">Edit <?=$contact->name?>'s Contact</h4>
         <hr>
         <form action="update.php" method="post">
+            <input type="hidden" name=id value="<?=$contact->id?>">
             <label for="names" class="form-label">Name</label>
             <input type="text" id="names" name="name" class="form-control" value="<?=$contact->name?>">
             <br>
