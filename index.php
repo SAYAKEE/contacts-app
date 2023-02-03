@@ -38,8 +38,8 @@ $contacts = $statement->fetchAll();
                         <td><?= $contact->name ?></td>
                         <td><?= $contact->phone ?></td>
                         <td>
-                            <a href="edit.php">Edit</a>
-                            <a href="delete.php">Delete</a>
+                            <a href="edit.php?id=<?=$contact->id?>">Edit</a>
+                            <a href="delete.php?id=<?=$contact->id?>">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach ?>
