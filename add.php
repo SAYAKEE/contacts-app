@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        body{
+            width: 100%;
+            max-width: 450px;
+            margin: 50px auto;
+        }
+    </style>
 </head>
 <body>
     <header class="text-center container">
         <h1>CONTACTS</h1>
         <hr>
     </header>
-    <main class="container">
+    <main class="container text-center">
         <h4>Create New Contact</h4>
-        
-        <form action="create.php" method="post">
+        <hr>
+        <form action="create.php" method="post" class="text-center">
             <label for="names" class="form-label">Name</label>
             <input type="text" id="names" name="name" class="form-control">
             <br>
